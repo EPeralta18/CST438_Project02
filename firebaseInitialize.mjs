@@ -29,4 +29,17 @@ const getUsers = async (dbRef) => {
   })
 }
 
-getUsers(dbRef);
+const getItems = async(dbRef) => {
+  get(child(dbRef, `items`)).then((snapshot) => {
+    if (snapshot.exists()) {
+      console.log(snapshot.val());
+    } else {
+      console.log("No data available");
+    }
+  }).catch((error) => {
+    console.log(error);
+  })
+}
+
+// getUsers(dbRef);
+getItems(dbRef);
