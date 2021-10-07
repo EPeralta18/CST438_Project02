@@ -2,7 +2,8 @@
 
 A simple wishlist website. 
 
-ERD:
+ERD:![Database ERD](https://user-images.githubusercontent.com/59929844/136378767-8dd3368a-925e-4d4d-8393-3db3528e1d33.png)
+
 
 # Tech
 Front End:<br>
