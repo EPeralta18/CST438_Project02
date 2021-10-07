@@ -1,5 +1,6 @@
 import { initializeApp } from 'firebase/app';
-import {getFirestore, collection, getDocs} from 'firebase/firestore/lite';
+// import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+import { getDatabase, ref, set, onValue, child, get } from "firebase/database";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDjDMxS20gu5lD9rRdnx2hGvcbaQulrqeA",
@@ -13,10 +14,19 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+const db = getDatabase();
+const dbRef = ref(db);
 
-const getUsers = async(db) => {
-  console.log(db);
+const getUsers = async (dbRef) => {
+  get(child(dbRef, `users`)).then((snapshot) => {
+    if (snapshot.exists()) {
+      console.log(snapshot.val());
+    } else {
+      console.log("No data available");
+    }
+  }).catch((error) => {
+    console.log(error);
+  })
 }
 
-getUsers(db);
+getUsers(dbRef);
