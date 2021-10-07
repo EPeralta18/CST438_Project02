@@ -41,5 +41,18 @@ const getItems = async(dbRef) => {
   })
 }
 
+const getWishlist = async(dbRef, username) => {
+  get(child(dbRef, `wishlist/${username}`)).then((snapshot) => {
+    if (snapshot.exists()) {
+      console.log(snapshot.val());
+    } else {
+      console.log("No data available");
+    }
+  }).catch((error) => {
+    console.log(error);
+  })
+}
+
 // getUsers(dbRef);
-getItems(dbRef);
+// getItems(dbRef);
+getWishlist(dbRef, "user1");
