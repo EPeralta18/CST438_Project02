@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Login </title>
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{% static 'loginPage/login.css' %}">
+      <script src="{% static 'loginPage/script.js' %}"></script>
+   
+
+  </head>
+
+  <body>
+  <center>
+
+
+  <h1>
+  Login
+  </h1>
+  <input type = "User" placeholder = "Enter User" id = "User"><br>
+  <input type = "Pass" placeholder = "Enter password" id = "pass"><br>
+  <button onclick = "signUp()" id = "signUp"> SignUp <button><br>
+  <button onclick = "signIn()" id = "signIn"> SignIn <button><br>
+  <button onclick = "signOut()" id = "signOut"> SignOut <button><br>
+  </center>
+  </body>
+
+</html>
