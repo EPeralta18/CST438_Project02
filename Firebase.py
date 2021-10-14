@@ -26,7 +26,7 @@ class Firebase:
       users = self.getUsers()
       for key in users:
         if users[key]['username'] == username:
-          return users[key]
+          return users[key], key
       return Null
 
     def getUserWishlist(self, username):
@@ -44,6 +44,12 @@ class Firebase:
       }
       self.database.child('users').push(data)
 
+    def removeUser(self, username):
+      user, key = self.getUser(username)
+      self.database.child('users').child(key).remove()
+
 
 
 firebase = Firebase()
+
+
