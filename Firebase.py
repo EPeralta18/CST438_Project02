@@ -23,9 +23,10 @@ class Firebase:
       return self.database.child('users').get().val()
 
     def getUser(self, username):
-      for user in self.getUsers():
-        if user["username"] == username:
-          return user
+      users = self.getUsers()
+      for key in users:
+        if users[key]['username'] == username:
+          return users[key]
       return Null
 
     def getUserWishlist(self, username):
@@ -35,17 +36,14 @@ class Firebase:
       items = self.getItems()
       return [items[i] for i in index]
 
+    def addUser(self, username, password):
+      data = {
+        "adminStatus": False,
+        "password": password,
+        "username": username
+      }
+      self.database.child('users').push(data)
 
 
 
 firebase = Firebase()
-
-print(firebase.getItems())
-
-print(firebase.getUsers())
-
-print(firebase.getUser("user2"))
-
-print(firebase.getUserWishlist("user1"))
-
-print(firebase.getItem(firebase.getUserWishlist("user1")))
