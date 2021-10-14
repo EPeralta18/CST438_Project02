@@ -1,20 +1,28 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Login </title>
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'login/login.css' %}">
+    <script src="{% static 'login/script.js' %}"></script>
 </head>
 <body>
+<center>
+<h1> Login</h1>
     <form>  
         <div>   
             <label>Username : </label>   
-            <input type="text" placeholder="Enter Username" name="username" required>  
+            <input type="text" placeholder="Enter Username" name="username" required>  <br>
             <label>Password : </label>   
-            <input type="password" placeholder="Enter Password" name="password" required>  
-            <button type="submit">Login</button>    
-            <button type="button" class="home"> home</button>   
-            Forgot <a href="#"> password? </a>   
+            <input type="password" placeholder="Enter Password" name="password" required>  <br><br>
+            <button type="submit">Login</button>    <br><br><br>
+            <button type="button" class="home"> home</button>   <br>
         </div>   
     </form>   
+<center>
 </body>
 </html>
