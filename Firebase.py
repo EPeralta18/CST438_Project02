@@ -48,8 +48,11 @@ class Firebase:
       user, key = self.getUser(username)
       self.database.child('users').child(key).remove()
 
+    def setAdminStatus(self, username, adminStatus):
+      user, key = self.getUser(username)
+      self.database.child('users').child(key).update({"adminStatus" : adminStatus})
+      print()
+
 
 
 firebase = Firebase()
-
-
