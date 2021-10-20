@@ -1,6 +1,7 @@
 from pyasn1.type.univ import Null
 import pyrebase
 
+
 class Firebase:
     def __init__(self):
         self.config = {
@@ -15,70 +16,71 @@ class Firebase:
         self.firebase = pyrebase.initialize_app(self.config)
         self.auth = self.firebase.auth()
         self.database = self.firebase.database()
-    
+
     def getItems(self):
-      return self.database.child('items').get().val()
+        return self.database.child('items').get().val()
 
     def getUsers(self):
-      return self.database.child('users').get().val()
+        return self.database.child('users').get().val()
 
     def getUser(self, username):
-      users = self.getUsers()
-      for key in users:
-        if users[key]['username'] == username:
-          return users[key], key
-      return None
+        users = self.getUsers()
+        for key in users:
+            if users[key]['username'] == username:
+                return users[key], key
+        return None
 
     def getUserWishlist(self, username):
-      return self.database.child('wishlist').get().val()[username]
-    
+        return self.database.child('wishlist').get().val()[username]
+
     def getItem(self, index):
-      items = self.getItems()
-      return [items[index[key]] for key in index]
+        items = self.getItems()
+        return [items[index[key]] for key in index]
 
     def addUser(self, username, password):
-      data = {
-        "adminStatus": False,
-        "password": password,
-        "username": username
-      }
-      self.database.child('users').push(data)
+        data = {
+            "adminStatus": False,
+            "password": password,
+            "username": username
+        }
+        self.database.child('users').push(data)
 
     def removeUser(self, username):
-      user, key = self.getUser(username)
-      self.database.child('users').child(key).remove()
+        user, key = self.getUser(username)
+        self.database.child('users').child(key).remove()
 
     def setAdminStatus(self, username, adminStatus):
-      user, key = self.getUser(username)
-      self.database.child('users').child(key).update({"adminStatus" : adminStatus})
-    
+        user, key = self.getUser(username)
+        self.database.child('users').child(
+            key).update({"adminStatus": adminStatus})
+
     def addItem(self, name, itemLink, image='No Image', website='No website'):
-      items = self.getItems()
-      data = {
-        "name" : name,
-        "link" : itemLink,
-        "image": image,
-        "website": website, 
-      }
-      self.database.child('items').push(data)
-      return self.getItemKey(name, itemLink, image, website)
+        items = self.getItems()
+        data = {
+            "name": name,
+            "link": itemLink,
+            "image": image,
+            "website": website,
+        }
+        self.database.child('items').push(data)
+        return self.getItemKey(name, itemLink, image, website)
 
     def addItemToUserWishlist(self, username, itemKey):
-      self.database.child('wishlist').child(username).push(itemKey)
+        self.database.child('wishlist').child(username).push(itemKey)
 
     def getItemKey(self, name, link, image='No Image', website='No website'):
-      items = self.getItems()
-      for key in items:
-        if items[key]["name"] == name and items[key]["link"] == link and items[key]["image"] == image and items[key]["website"] == website:
-          return key
-      return None
-    
+        items = self.getItems()
+        for key in items:
+            if items[key]["name"] == name and items[key]["link"] == link and items[key]["image"] == image and items[key]["website"] == website:
+                return key
+        return None
+
     def removeItem(self, key):
-      self.database.child('items').child(key).remove()
+        self.database.child('items').child(key).remove()
 
     def removeItemFromWishlist(self, username, itemKey):
-      wishlist = self.getUserWishlist(username)
-      for i in wishlist:
-        if wishlist[i] == itemKey:
-          self.database.child('wishlist').child(username).child(i).remove()
-
+        wishlist = self.getUserWishlist(username)
+        for i in wishlist:
+            if wishlist[i] == itemKey:
+                self.database.child('wishlist').child(
+                    username).child(i).remove()
