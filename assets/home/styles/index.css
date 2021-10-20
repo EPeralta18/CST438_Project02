@@ -25,6 +25,10 @@ a {
   appearance: button;
 }
 
+img {
+  display: block;
+}
+
 .d-flex {
   justify-content: center;
 }
