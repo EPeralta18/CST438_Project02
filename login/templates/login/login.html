@@ -13,16 +13,18 @@
 <body>
 <center>
 <h1> Login</h1>
-    <form>  
-        <div>   
-            <label>Username : </label>   
-            <input type="text" placeholder="Enter Username" name="username" required>  <br>
-            <label>Password : </label>   
-            <input type="password" placeholder="Enter Password" name="password" required>  <br><br>
-            <button type="submit">Login</button>    <br><br><br>
-            <button type="button" class="home"> home</button>   <br>
-        </div>   
-    </form>   
+
+ <!--  
+<form action="../list/" method="post">   -->
+    <div class="login">
+   <input type="text" placeholder="username" name="User"><br>
+   <input type="password" placeholder="password" name="Password"><br>
+   <input type="submit" value="Login once database works">
+   <input type="button" value="Login to go to page" onclick="location.href = '../list/';">
+   </div>
+   <a href = "../home"> back </a>
+ <!--  </form>-->
+
 <center>
 </body>
 </html>
