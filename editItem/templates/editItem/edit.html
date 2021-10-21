@@ -1,10 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>editItem </title>
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'editItem/editItem.css' %}">
+    <script src="{% static 'edit/script.js' %}"></script>
 </head>
+
 <body>
-<h1>What do you want to change</h1>
+<center>
+<h1>What do you want to add/change</h1>
+</center>
+<center>
+<form method="POST" action="">
+     <p> Description: </p>
+      <br>
+      <textArea id = "Description" name = "Description">
+      </textArea> 
+      <br>
+       <br>
+    <p> Image: </p>
+     <input type="text" name="image">
+     <br>
+      <br>
+     <p> URL: </p>
+      <input type="text" name="URL">
+      <br>
+      <br>
+      <button type="submit">Add</button>
+
+</form>
+ <a href = "../list/"> back </a>
+</center>
 </body>
 </html>
