@@ -23,5 +23,7 @@ urlpatterns = [
     path('login/', include('login.urls')),
     path('list/', include('list.urls')),
     path('editItem/', include('editItem.urls')),
+    path('createUser/', include('createUser.urls')),
+    path('editAccount/', include('editAccount.urls')),
 
 ]
