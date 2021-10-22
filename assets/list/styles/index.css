@@ -12,9 +12,8 @@ header {
     padding: 20px;
     margin: 20px;
     display: flex;
-    box-shadow: 2px 2px 2px;
     border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 0.25rem;
+    border-radius: 1rem;
 }
 
 .item_image, .item_info {
@@ -37,4 +36,13 @@ header {
 
 #item_website {
     text-transform: capitalize;
+}
+
+#add_item {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    z-index: 5;
+    width: 5rem;
 }
