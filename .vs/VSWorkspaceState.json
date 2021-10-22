@@ -1,0 +1,18 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\editAccount",
+    "\\editAccount\\templates",
+    "\\editAccount\\templates\\editAccount",
+    "\\list",
+    "\\list\\static",
+    "\\list\\static\\list",
+    "\\login",
+    "\\login\\static",
+    "\\login\\static\\login",
+    "\\login\\templates",
+    "\\login\\templates\\login"
+  ],
+  "SelectedNode": "\\editAccount\\templates\\editAccount\\editAccount.html",
+  "PreviewInSolutionExplorer": false
+}
