@@ -1,0 +1,38 @@
+body {
+    text-align: center;
+    background-color: white;
+}
+
+header {
+    background-color: aliceblue;
+    box-shadow: 2px 2px 5px;
+    padding: 50px;
+}
+
+form {
+    padding:50px;
+    margin: 20px;
+    max-width: max-content;
+    min-width: fit-content;
+    margin: 100px auto;
+}
+
+.card {
+    box-shadow: 2px 2px 5px;
+    border-radius: 1rem;
+}
+
+label {
+    margin: none;
+    text-align: left;
+    padding: 20px;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 50px;
+}
+
+a {
+    text-decoration: none;
+}

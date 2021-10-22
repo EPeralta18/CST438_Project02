@@ -23,6 +23,13 @@ class Firebase:
     def getUsers(self):
         return self.database.child('users').get().val()
 
+    def authUser(self, username, password):
+        users = self.getUsers()
+        for key in users:
+            if users[key]['username'] == username and users[key]['password'] == password:
+                return users[key]
+        return None
+
     def getUser(self, username):
         users = self.getUsers()
         for key in users:
