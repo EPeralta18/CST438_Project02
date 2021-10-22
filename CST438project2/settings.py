@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'list',
     'editItem',
     'createUser',
-    'editAccount'
+    'editAccount',
+    'newItem'
 ]
 
 MIDDLEWARE = [
