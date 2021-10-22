@@ -16,7 +16,7 @@
     <header>
         <h1>Sign Up</h1>
     </header>
-    <form action="../login/" method='post' class="card">
+    <form action="../newuser/" method='post' class="card">
         {% csrf_token %}
         <div class="form-group">
             <label for="username">Username</label>
@@ -27,13 +27,15 @@
             <input type="password" class="form-control" placeholder="Enter Password" id="password" name="password"
                 required>
         </div>
-        <button type="submit" class="btn btn-primary">Login</button> <br><br><br>
-        {% if loginFailed %}
-        <span class='text-danger'>Login Failed</span>
+        <button type="submit" class="btn btn-primary">Sign Up</button> <br><br><br>
+        {% if class == 'text-success' %}
+        <span class='text-success'>{{message}}</span>
+        {% elif class == 'text-danger' %}
+        <span class="text-danger">{{message}}</span>
         {% endif %}
     </form>
     <br>
-    <a href="../newuser">Sign Up</a>
+    <a href="../login">Login</a>
     <br>
     <a href="../home">Go back</a>
 </body>
