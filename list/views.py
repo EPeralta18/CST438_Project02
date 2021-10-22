@@ -4,7 +4,11 @@ from Firebase import Firebase
 def index(request):
     firebase = Firebase()
     username = request.session['username']
-    items = firebase.getItem(firebase.getUserWishlist(username))
+    wishlist = firebase.getUserWishlist(username)
+    if wishlist == None:
+        return render(request, 'list.html', {'username':username, 'items':'No items found in wishlist'})
+    items = firebase.getItem(wishlist)
+
     data = {
         'username': username,
         'items': items

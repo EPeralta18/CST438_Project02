@@ -38,7 +38,10 @@ class Firebase:
         return None
 
     def getUserWishlist(self, username):
-        return self.database.child('wishlist').get().val()[username]
+        try:
+            return self.database.child('wishlist').get().val()[username]
+        except:
+            return None
 
     def getItem(self, index):
         items = self.getItems()

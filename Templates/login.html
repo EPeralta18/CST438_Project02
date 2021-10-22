@@ -16,8 +16,8 @@
     <header>
         <h1>Login</h1>
     </header>
-    <form action="../newuser/" method='post' class="card">
-        {% csrf_token %}
+    <form action="../login/" method='post' class="card">
+        <!-- {% csrf_token %} -->
         <div class="form-group">
             <label for="username">Username</label>
             <input type="text" class="form-control" placeholder="Enter Username" id="username" name="username" required>
