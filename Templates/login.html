@@ -16,7 +16,7 @@
     <header>
         <h1>Login</h1>
     </header>
-    <form action="../login/" method='post' class="card">
+    <form action="../newuser/" method='post' class="card">
         {% csrf_token %}
         <div class="form-group">
             <label for="username">Username</label>
@@ -32,6 +32,8 @@
         <span class='text-danger'>Login Failed</span>
         {% endif %}
     </form>
+    <br>
+    <a href="../newuser">Sign Up</a>
     <br>
     <a href="../home">Go back</a>
 </body>
