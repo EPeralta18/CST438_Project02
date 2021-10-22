@@ -1,9 +1,40 @@
-header {
-    background-color: aliceblue;
-    padding: 20px;
+body {
+    text-align: center;
 }
 
-.card {
+header {
+    background-color: aliceblue;
+    padding: 50px;
+    box-shadow: 2px 2px 15px;
+}
+
+.cards {
     padding: 20px;
     margin: 20px;
+    display: flex;
+    box-shadow: 2px 2px 2px;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+
+.item_image, .item_info {
+    padding: 10px;
+    margin-left: 20px;
+    display: inline-block;
+}
+
+.item_info {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    margin: auto 10;
+    text-align: left;
+}
+
+#item_name {
+    font-weight: bolder;
+}
+
+#item_website {
+    text-transform: capitalize;
 }
