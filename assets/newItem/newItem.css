@@ -1,0 +1,29 @@
+h1
+{
+font-family:'Courier New';
+color: red;
+background-color: white;
+padding: 50px;
+box-shadow: 2px 2px 15px;
+}
+body
+{
+background-color: grey;
+}
+p
+{
+color: white;
+font-family:'Courier New';
+}
+button {
+  background-color: white;
+  border-style: solid;
+  border-color: red;
+  color: red;
+  padding: 5px 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 3px 1px;
+  cursor: pointer;
+}
