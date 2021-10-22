@@ -1,0 +1,48 @@
+body {
+    text-align: center;
+}
+
+header {
+    background-color: aliceblue;
+    padding: 50px;
+    box-shadow: 2px 2px 15px;
+}
+
+.cards {
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 1rem;
+}
+
+.item_image, .item_info {
+    padding: 10px;
+    margin-left: 20px;
+    display: inline-block;
+}
+
+.item_info {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    margin: auto 10;
+    text-align: left;
+}
+
+#item_name {
+    font-weight: bolder;
+}
+
+#item_website {
+    text-transform: capitalize;
+}
+
+#add_item {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    z-index: 5;
+    width: 5rem;
+}

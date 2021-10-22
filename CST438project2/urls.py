@@ -21,9 +21,9 @@ urlpatterns = [
     path('home/', include('home.urls')),
     path('admin/', admin.site.urls),
     path('login/', include('login.urls')),
+    path('items/', include('list.urls')),
+    path('newuser/', include('sign_up.urls')),
     path('list/', include('list.urls')),
-    path('editItem/', include('editItem.urls')),
-    path('createUser/', include('createUser.urls')),
     path('editAccount/', include('editAccount.urls')),
 
 ]
