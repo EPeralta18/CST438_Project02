@@ -15,7 +15,7 @@ def index(request):
         if ' ' in password:
             data = {'message':'Enter valid password', 'class':'text-danger'}
             return render(request, 'sign_up.html', data)
-        request.session['username'] == ""
+        # request.session['username'] == ""
         user = firebase.getUser(username)
         if user == None:
             firebase.addUser(username, password)
