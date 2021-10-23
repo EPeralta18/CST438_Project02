@@ -6,8 +6,8 @@ body {
 header {
     background-color: navy;
     color: HoneyDew;
-    font-style: 
     padding: 50px;
+    text-transform: capitalize;
     box-shadow: 2px 2px 15px;
 }
 
