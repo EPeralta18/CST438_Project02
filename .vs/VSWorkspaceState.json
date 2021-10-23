@@ -1,18 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\editAccount",
-    "\\editAccount\\templates",
-    "\\editAccount\\templates\\editAccount",
-    "\\list",
-    "\\list\\static",
-    "\\list\\static\\list",
+    "\\editAccount\\migrations",
+    "\\editAccount\\static",
     "\\login",
-    "\\login\\static",
-    "\\login\\static\\login",
-    "\\login\\templates",
-    "\\login\\templates\\login"
+    "\\login\\migrations",
+    "\\newItem",
+    "\\Templates"
   ],
-  "SelectedNode": "\\editAccount\\templates\\editAccount\\editAccount.html",
+  "SelectedNode": "\\newItem\\views.py",
   "PreviewInSolutionExplorer": false
 }

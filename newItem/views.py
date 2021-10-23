@@ -8,6 +8,7 @@ def index(request):
         description = request.POST['Description']
         image = request.POST['image']
         url = request.POST['URL']
+
         username = request.session['username']
         user = firebase.getUser(username)
 
@@ -23,7 +24,9 @@ def index(request):
 
 
         if user != None:
-            firebase.addItem(itemName, url, image, description)
+            key = firebase.addItem(itemName, url, image, description);
+            firebase.addItemToUserWishlist(username, key);
+            return redirect("../items/");
         else:
             return render(request, 'newItem.html', {'loginFailed': True})
     else:

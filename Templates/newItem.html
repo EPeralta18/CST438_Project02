@@ -17,6 +17,7 @@
 </center>
 <center>
 <form method="POST" action="../newItem/">
+{% csrf_token %}
     <p> Name: </p>
     <input type="text" name="itemName">
      <br>
@@ -38,7 +39,7 @@
       <button type="submit">Add</button>
 
 </form>
- <a href = "../list/"> back </a>
+ <a href = "../items/"> back </a>
 </center>
 </body>
 </html>
