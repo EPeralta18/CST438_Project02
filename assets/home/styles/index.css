@@ -21,13 +21,13 @@ a {
   padding-right: 50px;
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: #168BFF;
+  background-color: white;
   text-decoration: none;
   border-radius: 12px;
   color: black;
   margin: 50px;
   appearance: button;
-  color: white;
+  color: black;
 }
 
 #sign_log {
